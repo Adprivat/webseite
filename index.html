@@ -4,7 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adrian Schultz</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=1.0.1">
+    <style>
+        /* Force correct color values in both modes */
+        :root {
+            --accent-color: #1f9dc5 !important;
+        }
+        
+        [data-theme="dark"] {
+            --accent-color: #1f9dc5 !important;
+        }
+        
+        /* Text elements that use accent color */
+        .highlight, 
+        .timeline-date, 
+        .timeline-content h3,
+        .timeline-content h3::before,
+        .skills-category h3,
+        h2::before, h2::after,
+        .nav-links a::before {
+            color: var(--accent-color) !important;
+        }
+        
+        /* Background elements that use accent color */
+        button, 
+        .skill-level,
+        .skill-tag,
+        .project-back {
+            background-color: var(--accent-color) !important;
+        }
+        
+        /* Elements with accent color text on accent background */
+        button, .skill-tag, .project-back {
+            color: white !important;
+        }
+        
+        /* Border elements that use accent color */
+        .timeline::before,
+        .timeline-content,
+        h2,
+        .logo,
+        nav {
+            border-color: var(--accent-color) !important;
+        }
+        
+        /* Box shadows with accent color */
+        .logo {
+            box-shadow: 0 0 5px rgba(31, 157, 197, 0.2) !important;
+        }
+        
+        .logo:hover {
+            box-shadow: 0 0 10px rgba(31, 157, 197, 0.4) !important;
+        }
+        
+        input:focus, textarea:focus {
+            box-shadow: 0 0 0 2px rgba(31, 157, 197, 0.2) !important;
+        }
+        
+        button:hover {
+            box-shadow: 0 4px 8px rgba(31, 157, 197, 0.2) !important;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Fallback für Profilbild-Styling, falls CSS nicht geladen wird */
+        .profile-image {
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .profile-image img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #1f9dc5;
+            box-shadow: 0 0 15px rgba(31, 157, 197, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .profile-image:hover img {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(31, 157, 197, 0.6);
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -37,6 +124,12 @@
 
     <section id="home">
         <div class="hero">
+            <div class="profile-image" style="margin-bottom: 2rem; position: relative; display: inline-block;">
+                <img src="images/profil.jpg" alt="Adrian Schultz Profil" 
+                     style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 4px solid #1f9dc5; box-shadow: 0 0 15px rgba(31, 157, 197, 0.4); transition: all 0.3s ease;"
+                     onerror="this.onerror=null; this.src='images/Initialien.png'; this.style.borderRadius='0'; this.style.border='none'; this.style.boxShadow='none';">
+                <div style="position: absolute; top: -10px; left: -10px; right: -10px; bottom: -10px; border-radius: 50%; border: 2px dashed #1f9dc5; animation: rotate 20s linear infinite; opacity: 0.6;"></div>
+            </div>
             <h1><span class="highlight">< Adrian Schultz ></span></h1>
             <p class="typewriter">Tech-Enthusiast</p>
         </div>
