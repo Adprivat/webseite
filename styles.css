@@ -54,6 +54,18 @@ body {
     opacity: 0.6;
 }
 
+.rotating-border {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 50%;
+    border: 2px dashed var(--accent-color);
+    animation: rotate 20s linear infinite;
+    opacity: 0.6;
+}
+
 @keyframes rotate {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
@@ -178,6 +190,7 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding-top: 80px;
 }
 
 .highlight {
@@ -562,22 +575,119 @@ footer {
         height: 38px;
     }
     
+    .hero {
+        padding-top: 180px;
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .profile-image {
+        margin-top: 2rem;
+    }
+    
+    /* Timeline-Anpassungen für mittlere Bildschirme */
     .timeline::before {
         left: 30px;
     }
     
+    .timeline-item {
+        padding: 10px 10px 10px 40px;
+    }
+    
     .timeline-date {
-        left: -40px;
-        width: 60px;
-        font-size: 0.8rem;
+        position: static; /* Anstatt absolute Position */
+        width: 100%;
+        text-align: left;
+        margin-bottom: 0.5rem;
+        font-size: 0.85rem;
+        color: var(--accent-color);
+        font-weight: bold;
+    }
+    
+    .timeline-date span {
+        position: relative;
+        padding-left: 1.5rem;
+    }
+    
+    .timeline-date span::before {
+        content: '◆';
+        position: absolute;
+        left: 0;
+        color: var(--accent-color);
     }
     
     .timeline-content {
-        margin-left: 10px;
+        margin-left: 0;
     }
     
     .skills-container {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Für sehr kleine Bildschirme */
+@media (max-width: 480px) {
+    .hero {
+        padding-top: 220px; /* Noch mehr Abstand für sehr kleine Bildschirme */
+    }
+    
+    .profile-image img {
+        width: 150px; /* Kleineres Bild für sehr kleine Bildschirme */
+        height: 150px;
+    }
+    
+    .profile-image::before {
+        top: -8px;
+        left: -8px;
+        right: -8px;
+        bottom: -8px;
+    }
+    
+    .rotating-border {
+        top: -8px;
+        left: -8px;
+        right: -8px;
+        bottom: -8px;
+    }
+    
+    nav {
+        padding-bottom: 10px;
+    }
+    
+    .nav-links {
+        padding: 0.3rem 0.5rem;
+        gap: 0.8rem;
+    }
+    
+    .nav-links a {
+        font-size: 0.85rem;
+        padding: 0.2rem 0.5rem;
+    }
+    
+    section {
+        padding: 3rem 1rem;
+    }
+    
+    /* Nochmals angepasste Timeline für sehr kleine Bildschirme */
+    .timeline-item {
+        padding: 10px 10px 10px 25px;
+    }
+    
+    .timeline-date span {
+        font-size: 0.75rem;
+        padding-left: 1.2rem;
+    }
+    
+    .timeline-date span::before {
+        font-size: 0.7rem;
+    }
+    
+    .timeline-content {
+        padding: 15px 20px;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1rem;
     }
 }
 
