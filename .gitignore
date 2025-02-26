@@ -1,0 +1,57 @@
+# Betriebssystem-Dateien
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor-Dateien
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+package-lock.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+*.db
+
+# Temporäre Dateien
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Persönliche Dateien
+Datenschutztest.txt
+
+# Projektordner mit eigenen Git-Repositories
+python-file-manager/
+python-todo-list/
+react-task-manager/
+theme-switcher/ 
