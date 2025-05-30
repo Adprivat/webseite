@@ -810,3 +810,10 @@ footer a:hover {
     text-decoration: none;
     opacity: 0.8;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor {
+    animation: none;
+    opacity: 1;
+  }
+}

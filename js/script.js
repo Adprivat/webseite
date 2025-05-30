@@ -67,7 +67,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Typing effect
     const typedTextElement = document.querySelector('.typed-text');
-    const cursorElement = document.querySelector('.cursor');
     
     const textArray = [
         "Tech-Enthusiast",

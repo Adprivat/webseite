@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adrian Schultz | Tech-Enthusiast </title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -16,17 +15,17 @@
     <div class="theme-toggle">
         <input type="checkbox" id="theme-switch">
         <label for="theme-switch" class="toggle-label">
-            <i class="fas fa-moon"></i>
-            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon" aria-hidden="true"></i>
+            <i class="fas fa-sun" aria-hidden="true"></i>
         </label>
     </div>
 
     <header>
         <div class="terminal-header">
             <div class="terminal-buttons">
-                <span class="terminal-button close"></span>
-                <span class="terminal-button minimize"></span>
-                <span class="terminal-button maximize"></span>
+                <span class="terminal-button close" role="presentation" aria-hidden="true"></span>
+                <span class="terminal-button minimize" role="presentation" aria-hidden="true"></span>
+                <span class="terminal-button maximize" role="presentation" aria-hidden="true"></span>
             </div>
             <div class="terminal-title">
                 <img src="img/Initialien.png" alt="Adrian Schultz Logo" class="brand-logo">
@@ -256,10 +255,9 @@
                             <div class="project-body">
                                 <div class="project-description">
                                     <h4>Automatisierte Dateiverwaltung</h4>
-                                    <ul>
+                                    <ul></ul>
                                         <li>Automatisches Sortieren nach Dateityp</li>
                                         <li>Echtzeit-Überwachung des Download-Ordners</li>
-                                        <li>Intelligente Kategorisierung</li>
                                         <li>Zeitstempel-basierte Umbenennung</li>
                                         <li>Logging aller Aktivitäten</li>
                                     </ul>
@@ -272,7 +270,7 @@
                                 </div>
                                 <div class="project-links">
                                     <a href="https://github.com/Adprivat/python-file-manager" target="_blank" class="project-link">
-                                        <i class="fab fa-github"></i> GitHub Repository
+                                        <i class="fab fa-github" aria-hidden="true"></i> GitHub Repository
                                     </a>
                                 </div>
                             </div>
@@ -303,7 +301,7 @@
                                 </div>
                                 <div class="project-links">
                                     <a href="https://github.com/Adprivat/webseite" target="_blank" class="project-link">
-                                        <i class="fab fa-github"></i> GitHub Repository
+                                        <i class="fab fa-github" aria-hidden="true"></i> GitHub Repository
                                     </a>
                                 </div>
                             </div>
@@ -334,7 +332,7 @@
                                 </div>
                                 <div class="project-links">
                                     <a href="https://github.com/Adprivat" target="_blank" class="project-link">
-                                        <i class="fab fa-github"></i> GitHub Repository
+                                        <i class="fab fa-github" aria-hidden="true"></i> GitHub Repository
                                     </a>
                                 </div>
                             </div>
@@ -353,15 +351,15 @@
                     <div class="contact-container">
                         <div class="contact-info">
                             <div class="contact-item">
-                                <i class="fas fa-map-marker-alt"></i>
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                                 <span>Oberste Gasse 16, 34117 Kassel</span>
                             </div>
                             <div class="contact-item">
-                                <i class="fas fa-envelope"></i>
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
                                 <span>Kontakt@adrianschultz.de</span>
                             </div>
                             <div class="contact-item">
-                                <i class="fab fa-linkedin"></i>
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
                                 <span><a href="https://www.linkedin.com/in/adrian-schultz-835a43322" target="_blank">LinkedIn</a></span>
                             </div>
                         </div>
@@ -388,8 +386,8 @@
                     <div class="privacy-content">
                         <h1>Impressum</h1>
 
-                        <p>Adrian Schultz<br />
-                        Oberste Gasse 16<br />
+                        <p>Adrian Schultz<br>
+                        Oberste Gasse 16<br>
                         34117 Kassel</p>
 
                         <h2>Kontakt</h2>
@@ -444,8 +442,8 @@
                         
                         <h3>Hinweis zur verantwortlichen Stelle</h3> 
                         <p>Die verantwortliche Stelle f&uuml;r die Datenverarbeitung auf dieser Website ist:</p> 
-                        <p>Adrian Schultz<br />
-                        Oberste Gasse 16<br />
+                        <p>Adrian Schultz<br>
+                        Oberste Gasse 16<br>
                         34117 Kassel</p>
 
                         <p>E-Mail: Kontakt@adrianschultz.de</p>
